@@ -1,3 +1,4 @@
 1|Juan Camilo|Cruz Franco|kusanagimilo@gmail.com|3006163077|Administrador|kamilo
 2|Don |Operario|operario@operario.com|6975575|Operario|1234567
 3|Don|Visualizador|visualizador@visualizador.com|12345678|Visualizador|1234567890
+4|PRUEBA|APELLIDO PRUEBA|PRUEBA@PRUEBA.COM|6975575|Administrador|CLAVEPRUEBA

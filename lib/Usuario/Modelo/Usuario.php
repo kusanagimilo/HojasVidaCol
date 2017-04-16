@@ -16,13 +16,7 @@ class Usuario {
     public function CrearUsuario($data) {
 
 
-        $id_usuario = count(file("../../Planos/Usuario.txt"));
-
-        if ($id_usuario == 0) {
-            $id_usuario = 1;
-        }
-
-
+        $id_usuario = count(file("../../Planos/Usuario.txt")) + 1;
 
         $file = fopen("../../Planos/Usuario.txt", "a");
 
