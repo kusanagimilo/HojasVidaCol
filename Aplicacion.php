@@ -17,8 +17,10 @@ and open the template in the editor.
         <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
         <script type="text/javascript" src="css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
         <script type="text/javascript" src="js/Usuario.js"></script>
+        <script type="text/javascript" src="js/Docente.js"></script>
         <script type="text/javascript" src="js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
         <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="js/jquery_validate.js"></script>
 
     </head>
     <body>
@@ -123,12 +125,12 @@ and open the template in the editor.
                                     <table class="table">
                                         <tr>
                                             <td>
-                                                <a href="#">Crear docente</a>
+                                                <a href="#" onclick="FormCrearDocente()">Crear docente</a>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="#">Admiinistracion de docentes</a> 
+                                                <a href="#" onclick="AdministracionDocentes()">Admiinistracion de docentes</a> 
                                             </td>
                                         </tr>
 

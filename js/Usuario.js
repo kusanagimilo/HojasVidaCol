@@ -32,3 +32,55 @@ function VerAdminUsuarios() {
 
     $("#cont_cod").html(data);
 }
+
+function AlmacenarUsuario() {
+    var data;
+    $.ajax({
+        type: "POST",
+        url: "lib/Usuario/Controlador/UsuarioControl.php",
+        async: false,
+        data: {
+            opcion: 'crear_usuario',
+            nombres: $("#nombres").val(),
+            apellidos: $("#apellidos").val(),
+            correo: $("#correo").val(),
+            rol: $("#rol").val(),
+            telefono: $("#telefono").val(),
+            clave: $("#clave").val()
+        },
+        success: function (retu) {
+            data = retu;
+        }
+    });
+
+
+    if (data == "bien") {
+        alert('Se ingreso correctamente el usuario');
+        FormCrearUsuario();
+    } else if (data == "mal") {
+        alert('No se logro ingresar el usuario');
+    } else if (data == "existe") {
+        alert("El usuario ya existe");
+    }
+}
+
+
+function GridUsuario() {
+    var data;
+    $.ajax({
+        type: "POST",
+        url: "lib/Usuario/Controlador/UsuarioControl.php",
+        async: false,
+        dataType: 'json',
+        data: {
+            opcion: 'AdministrarUsuario'
+        },
+        success: function (retu) {
+            data = retu;
+        }
+    });
+
+    return data;
+
+
+}

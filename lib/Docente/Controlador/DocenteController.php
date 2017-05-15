@@ -5,17 +5,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include '../Modelo/Usuario.php';
-$obj_usuario = new Usuario();
+include '../Modelo/Docente.php';
+$obj_docente = new Docente();
 $opcion = $_POST['opcion'];
 
-if ($opcion == 'crear_usuario') {
-    $resultado = $obj_usuario->CrearUsuario($_POST);
+if ($opcion == 'crear_docente') {
+    $resultado = $obj_docente->CrearDocente($_POST);
+    echo $resultado;
+}
+if ($opcion == 'AdministrarDocentes') {
+    $resultado = $obj_docente->AdministrarDocentes($_POST);
     echo $resultado;
 }
 
 
-if ($opcion == 'AdministrarUsuario') {
-    $resultado = $obj_usuario->AdministrarUsuario($_POST);
-    echo $resultado;
-}
+

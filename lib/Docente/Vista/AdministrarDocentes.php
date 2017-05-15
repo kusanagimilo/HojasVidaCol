@@ -1,11 +1,15 @@
-<table id="tabla_admin_usuarios"  class="table-bordered" class="display" >
+
+<table class="table-bordered" id="tabla_admin_docentes" class="display" >
     <thead>
         <tr>
 
             <th>NOMBRE COMPLETO</th>
+            <th>IDENTIFICACION</th>
+            <th>FECHA NACIMIENTO</th>
+            <th>ESTADO CIVIL</th>
             <th>CORREO</th>
             <th>TELEFONO</th>
-            <th>ROL</th>
+            <th>DIRECCION</th>
             <th>ACCIONES</th>
         </tr>
     </thead>
@@ -15,13 +19,15 @@
 </table>
 
 
+
+
 <script>
 
 
-    var json = GridUsuario();
+    var json = GridDocentes();
 
     $(document).ready(function () {
-        $('#tabla_admin_usuarios').DataTable({
+        $('#tabla_admin_docentes').DataTable({
             data: json
         });
     });
