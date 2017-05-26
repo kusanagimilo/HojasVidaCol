@@ -14,13 +14,14 @@ if ($usuario['correo'] != NULL || $usuario['correo'] != '') {
         <head>
             <meta charset="UTF-8">
             <title>Hojas de vida prof</title>
+            <script type="text/javascript" src="js/jquery-2.1.4.js"></script>
             <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" type="text/css">
             <link rel="stylesheet" href="css/app.css" type="text/css">
             <link rel="stylesheet" href="css/menu.css" type="text/css">
             <link rel="stylesheet" href="js/jquery-ui-1.11.4.custom/jquery-ui.css" type="text/css">
             <link rel="stylesheet" href="css/jquery.dataTables.css" type="text/css">
 
-            <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+
             <script type="text/javascript" src="css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
             <script type="text/javascript" src="js/Usuario.js"></script>
             <script type="text/javascript" src="js/Docente.js"></script>

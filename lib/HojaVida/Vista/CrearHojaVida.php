@@ -19,6 +19,9 @@
                 </tr>
             </table>
         </center>
+
+
+
         <div style="margin: 1% 1% 1% 1%;" id="con_cod_hoja_v">
             <table  class="table table-bordered table-striped">
                 <thead>
@@ -46,42 +49,72 @@
             <table  class="table table-bordered table-striped">
                 <thead>
                     <tr>
+
                         <th colspan="6">
-                            Experiencia profesional 
-                            <input type="button" value="Agregar" class="btn btn-success">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Empresa</th>
-                        <th>Cargo</th>
-                        <th>Area</th>
-                        <th>Funcion</th>
-                        <th>Fecha inicio</th>
-                        <th>Fecha fin</th>
-                    </tr>
+                <center>
+                    Experiencia profesional 
+                    <input type="button" value="Agregar" class="btn btn-success">
+                </center>
+                </th>
+
+                </tr>
+                <tr>
+                    <th>Empresa</th>
+                    <th>Cargo</th>
+                    <th>Area</th>
+                    <th>Funcion</th>
+                    <th>Fecha inicio</th>
+                    <th>Fecha fin</th>
+                </tr>
                 </thead>
                 <tbody>
 
                 </tbody>
 
             </table>
-            
+
             <br>
             <br>
             <table  class="table table-bordered table-striped">
                 <thead>
                     <tr>
-                        <th colspan="6">
-                            Formacion
-                            <input type="button" value="Agregar" class="btn btn-success">
-                        </th>
-                    </tr>
+                        <th colspan="4">
+                <center>
+                    Formacion
+                    <input type="button" value="Agregar" class="btn btn-success" onclick="DialogAdicionarFormacion()">
+                </center>
+                </th>
+                </tr>
+                <tr>
+                    <th>Centro educativo</th>
+                    <th>Titulo obtenido</th>
+                    <th>Fecha graduacion</th>
+                    <th>Eliminar</th>
+
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+
+            </table>
+            <br>
+            <br>
+            <table  class="table table-bordered table-striped">
+                <thead>
                     <tr>
-                        <th>Centro educativo</th>
-                        <th>Titulo obtenido</th>
-                        <th>Fecha graduacion</th>
-                       
-                    </tr>
+                        <th colspan="2">
+                <center>
+                    Conocimientos o habilidades : <input type="text" id="con_hab" name="con_hab" placeholder="Ingrese el conocimiento o habilidad">
+                    <input type="button" value="Agregar" class="btn btn-success">
+                </center>
+                </th>
+                </tr>
+                <tr>
+                    <th>Conocimiento o habilidad</th>
+                    <th>Eliminar</th>
+
+                </tr>
                 </thead>
                 <tbody>
 
@@ -90,5 +123,8 @@
             </table>
 
         </div>
+
     </div>
 </div>
+<div id="dialog_add_exp"></div>
+<div id="dialog_add_formacion"></div>
