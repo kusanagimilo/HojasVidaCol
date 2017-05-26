@@ -27,28 +27,30 @@ and open the template in the editor.
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="#" autocomplete="on"> 
+                            <form  action="lib/Usuario/Controlador/UsuarioControl.php" autocomplete="on" method="POST"> 
                                 <h1>INGRESO</h1> 
                                 <p> 
                                     <label for="username" class="uname" >Ingrese su nombre de usuario</label>
-                                    <input id="username" name="username" required="required" type="text" placeholder="nombre de usuario"/>
+                                    <input id="correo" name="correo" required="required" type="text" placeholder="nombre de usuario"/>
                                 </p>
                                 <p> 
                                     <label for="password" class="youpasswd">Clave</label>
-                                    <input id="password" name="password" required="required" type="password" placeholder="clave" /> 
+                                    <input id="clave" name="clave" required="required" type="password" placeholder="clave" /> 
                                 </p>
-                                
+
+                                <input type="hidden" name="opcion" id="opcion" value="LogIn">
+
                                 <p class="login button"> 
-                                    <a href="Aplicacion.php" class="btn btn-default">Ingresar</a>
+                                    <input type="submit" value="Ingresar" class="btn btn-default">
                                 </p>
                                 <p class="change_link">
-                                  
+
                                     <a href="#" class="to_register">Recuperar clave </a>
                                 </p>
                             </form>
                         </div>
 
-                        
+
 
                     </div>
                 </div>  

@@ -28,10 +28,13 @@ class Usuario {
         if ($filas > 0) {
             return 'existe';
         } else {
-            $sql_inserta_usuario = "INSERT INTO usuario (nombres,apellidos,correo,telefono,rol,clave) VALUES(
+
+            $clave = hash('sha512', $data['clave']);
+
+            $sql_inserta_usuario = "INSERT INTO usuario (nombres,apellidos,correo,telefono,rol,clave,estado) VALUES(
                                  '" . $data['nombres'] . "','" . $data['apellidos'] . "',
                                  '" . $data['correo'] . "','" . $data['telefono'] . "',
-                                 '" . $data['rol'] . "','" . $data['clave'] . "')";
+                                 '" . $data['rol'] . "','" . $clave . "','AC')";
             $resul = mysqli_query($conexion_bd, $sql_inserta_usuario);
 
             if ($resul) {
@@ -79,6 +82,46 @@ class Usuario {
         $json = json_encode($arreglo_retorno);
 
         return $json;
+    }
+
+    public function Login($data) {
+        $obj_bd = new BD();
+        $conexion_bd = $obj_bd->conectar();
+        $clave = hash('sha512', $data['clave']);
+
+        $sql = "SELECT * FROM usuario 
+               WHERE correo = '" . htmlspecialchars($data['correo']) . "'
+               AND clave = '" . $clave . "' ";
+
+
+
+        $resul = mysqli_query($conexion_bd, $sql);
+        $cont_us = mysqli_num_rows($resul);
+
+
+
+
+        if ($cont_us > 0) {
+            $arreglo_usuario = mysqli_fetch_array($resul);
+
+
+            if ($arreglo_usuario['estado'] == 'AC') {
+
+                if ($arreglo_usuario['correo'] == $data['correo'] && $arreglo_usuario['clave'] == $clave) {
+
+                    session_start();
+                    $_SESSION['usuario'] = $arreglo_usuario;
+
+                    header('Location: ../../../Aplicacion.php');
+                } else {
+                    return 3;
+                }
+            } else {
+                return 2;
+            }
+        } else {
+            return 3;
+        }
     }
 
 }

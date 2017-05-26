@@ -19,3 +19,11 @@ if ($opcion == 'AdministrarUsuario') {
     $resultado = $obj_usuario->AdministrarUsuario($_POST);
     echo $resultado;
 }
+if ($opcion == 'LogIn') {
+    $resultado = $obj_usuario->Login($_POST);
+    if ($resultado == 3) {
+        echo "<script>alert('Revise sus datos de acceso');window.location= '../../../index.php';</script>";
+    } else if ($resultado == 2) {
+        echo "<script>alert('Su usuario se encuentra inactivo');window.location= '../../../index.php';</script>";
+    }
+}
